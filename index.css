@@ -37,6 +37,8 @@ body {
 .WebsiteHeader {
     margin-bottom:20px;
 }
+
+/* Questions */
 .QuestionContainer {
     display:inline-block;
     position:relative;
@@ -61,13 +63,13 @@ body {
     height: max(4vh, 3vw);
     width: max(4vh, 3vw);
 }
+  /* Custom Checkbox */
 .question_checkbox input {
     pointer-events:none;    
     height:0;
     width:0;
     opacity: 0;
 }
-
 .checkbox, .checkbox:after {
     width: max(2vh, 1.5vw);
     height: max(2vh, 1.5vw);
@@ -92,11 +94,10 @@ body {
 .checkbox:hover, .checkbox:hover:after {
     background-color:rgba(249, 201, 94, 0.25);
 }
-
 .question_checkbox input:checked ~ .checkbox, .question_checkbox input:checked ~ .checkbox:after {
     background-color: #f9c95e;
 }
-
+  /* Submit Button */
 .question_submit {
     position:absolute;
     bottom:10px;
@@ -104,12 +105,13 @@ body {
     transform:translatex(50%);
     padding:15px 20px;
     border:none;
-    background-color: black;
+    background-color: #190C35;
     font-size:1.3em;
     color:#f9c95e;
     border-radius:10px;
 }
 
+/* Overlays */
 .Overlay, .OverlayDisc{
     width:100vw;
     height:100vh;
@@ -128,6 +130,7 @@ body {
     opacity:1;
     pointer-events:all;
 }
+/* Results and Disclaimer Overlays*/
 .ResultsContainer, .DisclaimerContainer {
     min-width:50%;
     min-height:50%;
@@ -169,6 +172,7 @@ body {
     text-align:center;
     box-sizing:border-box;
 }
+  /* Results Styling */
 .results_score {
     font-size:5em;
 }
@@ -177,6 +181,8 @@ body {
     font-weight:bold;
 }
 .results_interpretation {
+    overflow-y: auto;
+    max-height: 30vh;
     border-radius:20px;
     background-color: rgba(69, 32, 87, 1);
     padding: 10px 30px;
@@ -187,8 +193,62 @@ body {
     color:white;
     text-align: center;
 }
+  /* Disclaimer Styling */
 #disc_opinions, #disc_data {
     color: white;
     text-align: center;
     margin-top: 15px;
+}
+
+/* Logo */
+#SocialsLogos {
+    font-size: 2.5vh;
+    color: white;
+    width: auto;
+    text-align: center;
+}
+#LogoContainer {
+    --size: max(5vw, 10vh);
+    background-color: #190C35;
+    width: calc(var(--size)*1.3);
+    height: calc(var(--size) + 2.5vh);
+    padding: calc(var(--size)/10*1.3) 0;
+    border-radius: calc(var(--size)*0.5);
+    text-align: center;
+    position: fixed;
+    bottom: 1vh;
+    right: 1vh;
+    transition: height 1s ease-out;
+}
+#LogoContainer:hover {
+    height: calc(var(--size)*3.6);
+    transition: height 1s ease-in;
+}
+.Logo img, #YBLogo {
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+}
+.Logo, #YBLogo {
+    display: inline-block;
+    position: relative;
+}
+#YBLogo {
+    opacity: 1;
+    transition: opacity 0.25s linear 0.75s;
+}
+.Logo:NOT(#YBLogo) {
+    margin: calc(var(--size)*0.1) 0;
+    opacity: 0;
+    bottom: calc(-1*var(--size));
+    transition: opacity 0.05s, bottom 0.25s ease-out;
+}
+#LogoContainer:hover #YBLogo {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+#LogoContainer:hover .Logo:NOT(#YBLogo) {
+    bottom: calc(var(--size) + var(--size)*0.1);
+    opacity: 1;
+    transition: opacity 0.05s linear 1s, bottom 0.25s ease-in 0.75s;
 }
