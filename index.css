@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@font-face { font-family: Gotham; src: url('../font/Gotham-Black.otf'); } 
-@font-face { font-family: Montserrat; src: url('../font/Montserrat-VariableFont_wght.ttf'); } 
+@font-face { font-family: Gotham; src: url('font/Gotham-Black.otf'); } 
+@font-face { font-family: Montserrat; src: url('font/Montserrat-VariableFont_wght.ttf'); } 
 
 @media only screen and (max-width:800px) {
     /**.question{
@@ -14,7 +14,7 @@ body {
     width:100%;
     min-height:100vh;
     /* background-color:rgb(230,230,230); */
-    background: url('../img/bg.png') fixed no-repeat;
+    background: url('img/bg.png') fixed no-repeat;
     background-size: cover;
     overflow-x:hidden;
     font-size:2.5vh;
@@ -58,6 +58,8 @@ body {
 }
 .question_checkbox {
     margin-right:2vh;
+    height: max(4vh, 3vw);
+    width: max(4vh, 3vw);
 }
 .question_checkbox input {
     pointer-events:none;    
@@ -65,18 +67,33 @@ body {
     width:0;
     opacity: 0;
 }
+
+.checkbox, .checkbox:after {
+    width: max(2vh, 1.5vw);
+    height: max(2vh, 1.5vw);
+    border: 2px solid #f9c95e;
+}
 .checkbox {
     display: block;
-    width:max(4vh,3vw);
-    height:max(4vh,3vw);
-    border-radius:max(4vh, 3vw);
-    border:5px solid #f9c95e;
+    transform: skew(22.5deg, 22.5deg);
+    position: relative;
+    top: max(1vh, 0.75vw);
+    left: max(1vh, 0.75vw);
+    rotate: 45deg;
 }
-.checkbox:hover {
+.checkbox:after {
+    transform: skew(-33.75deg, -33.75deg) scale(1.33);
+    content: "";
+    position: absolute;
+    top:-0.25vh;
+    left:-0.25vh;
+
+}
+.checkbox:hover, .checkbox:hover:after {
     background-color:rgba(249, 201, 94, 0.5);
 }
 
-.question_checkbox input:checked ~ .checkbox {
+.question_checkbox input:checked ~ .checkbox, .question_checkbox input:checked ~ .checkbox:after {
     background-color: #f9c95e;
 }
 
@@ -114,7 +131,7 @@ body {
 .ResultsContainer, .DisclaimerContainer {
     min-width:50%;
     min-height:50%;
-    background: url('../img/disc_bg.png') center/cover no-repeat fixed;
+    background: url('img/disc_bg.png') center/cover no-repeat fixed;
     color:white;
     display:block;
     border-radius:20px;
