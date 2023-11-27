@@ -35,7 +35,13 @@ function createQuestionElement(string,index) {
     let input = document.createElement("input");
     input.type = "checkbox";
     input.tabIndex = -1;
+    input.id = "box" + index
+    let box = document.createElement("span");
+    box.className = "checkbox"
+    box.onclick = "document.getElementById(\"box" + index + "\").checked = true"
     checkbox.appendChild(input);
+    checkbox.appendChild(box);
+
 
     let content = document.createElement("div");
     content.className = "question_content";
@@ -94,4 +100,11 @@ function hideResults() {
     document.getElementById("Overlay").classList.add("state-hidden");
     document.getElementById("ResultsContainer").classList.remove("state-displayed");
     document.getElementById("ResultsContainer").classList.add("state-hidden");
+}
+
+function hideDisclaimer() {
+    document.getElementById("OverlayDisc").classList.remove("state-displayed");
+    document.getElementById("OverlayDisc").classList.add("state-hidden");
+    document.getElementById("DisclaimerContainer").classList.remove("state-displayed");
+    document.getElementById("DisclaimerContainer").classList.add("state-hidden");
 }

@@ -105,7 +105,7 @@ var questions = raw_questions.split("\n");
 questions.shift();
 
 var raw_results = 
-`result1: wowowowwowo (100)
+`result1: wowowowwowo awofew fwi efiwe fj iwewefwe fweifuiueir weoi fw jwefj e ruw ero wifj dsj fojweei (100)
 result2: ehhehehehehe (90-99)
 result3: isjakfjsdkfjwel (80-89)
 result4: hihiihihihi (60-79)

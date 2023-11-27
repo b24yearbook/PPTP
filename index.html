@@ -6,11 +6,9 @@
     <body onload="onload()">
         <script src="data.js"></script>
         <script src="main.js"></script>
-        
         <div class="Content">
             <header class="WebsiteHeader">
-                <h1> Pisay Purity Test </h1>
-                <p class="disclaimer">Disclaimer: We save no data here, as everything is run client-side. Your secrets are safe with you :)</p>
+                <h1 style="color:#F9C95E; font-family: Gotham">Pisay Purity Test </h1>
                 <div id="Description">
                     <h4>Hey, scholar! Have you...</h4>
                 </div>
@@ -23,14 +21,25 @@
             </div>
         </div>
         
+        <div class="OverlayDisc state-displayed" id="OverlayDisc" onclick="hideDisclaimer()">
+            <div class="DisclaimerContainer state-displayed" id="DisclaimerContainer">
+                <div class="disclaimer_container">
+                    <h1 class="disclaimer_head" id="disclaimer_head">Disclaimer:</h1>
+                    <p class="disclaimer" id="disclaimer" style="font-style:normal;">We save no data here, as everything is run client-side. Your secrets are safe with you :)</p>
+                </div>
+            </div>
+        </div>
+        
         <div class="Overlay state-hidden" id="Overlay" onclick="hideResults()">
             <div class="ResultsContainer state-hidden" id="ResultsContainer">
                 <p>Your score is...</p>
                 <div class="results_score_container">
-                    <h1 class="results_score" id="results_score">????</h1>
-                    <p class="results_title" id="results_title">Chris Tan's Dream</p>
+                    <h1 class="results_score" id="results_score">???</h1>
+                    <p class="results_title" id="results_title">?????????????????</p>
                 </div>
-                <p id="results_interpretation">Throw masks in the proper bin until your graduation, great scholar.</p>
+                <div class="results_interpretation">
+                    <p id="results_interpretation">???????????????????????????????????????????????????????????????????</p>
+                </div>
             </div>
         </div>
        
