@@ -88,6 +88,8 @@ function displayResults(score) {
     
     // Calculate color!
     // document.getElementById("results_score_container").style = score;
+
+    // confetti stuff (are we still going to do this..)
 }
 function hideResults() {
     document.getElementById("Overlay").classList.remove("state-displayed");
