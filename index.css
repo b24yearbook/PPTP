@@ -85,12 +85,12 @@ body {
     transform: skew(-33.75deg, -33.75deg) scale(1.33);
     content: "";
     position: absolute;
-    top:-0.25vh;
-    left:-0.25vh;
+    top: max(-0.25vh, -0.1875vw);
+    left: max(-0.25vh, -0.1875vw);
 
 }
 .checkbox:hover, .checkbox:hover:after {
-    background-color:rgba(249, 201, 94, 0.5);
+    background-color:rgba(249, 201, 94, 0.25);
 }
 
 .question_checkbox input:checked ~ .checkbox, .question_checkbox input:checked ~ .checkbox:after {
@@ -180,10 +180,15 @@ body {
     border-radius:20px;
     background-color: rgba(69, 32, 87, 1);
     padding: 10px 30px;
-    margin: 0 20px;
+    margin: 10px 20px;
 }
-#results_interpretation, #disclaimer {
+#results_interpretation {
     font-style:italic;
     color:white;
     text-align: center;
+}
+#disc_opinions, #disc_data {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
 }
