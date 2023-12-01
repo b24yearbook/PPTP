@@ -72,12 +72,9 @@ function getResultOnScore(s) {
         cond = results[i].range
         if (cond[0] <= s &&  s <= cond[1]) {r = {title: results[i].title, interpretation: results[i].description}; break;}
     }
-    console.log(grades)
     for (var i = 0; i < grades.length; i++) {
-        console.log(grades[i]);
         if (grades[i][1] <= s) {r.title = grades[i][0]; break;}
     }
-    console.log(r)
     return r
 }
 
@@ -94,7 +91,6 @@ function displayResults(score) {
     document.getElementById("results_score").innerHTML = score;
 
     result = getResultOnScore(score)
-    console.log(result)
     document.getElementById("results_title").innerHTML = result.title;
     document.getElementById("results_interpretation").innerHTML = result.interpretation;
     
