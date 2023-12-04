@@ -1,6 +1,6 @@
 var raw_questions = 
 `[Have you…]
-Gotten someone assassinated during Fair
+Caused someone to be assassinated during Fair
 Violated the school's dress code and got an NCR for it
 Worn the wrong uniform
 Not yet memorized the scholar's pledge
